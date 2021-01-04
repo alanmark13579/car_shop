@@ -9,8 +9,8 @@ public class Shop {
     }
     public void searchCar(Car car) {  //賣出一部車
         System.out.println("車型："  + car.getName()  + " 單價："  + car.getPrice()+
-                " 駕駛座位置：" + car.drive_position()+" 導航型號:" +car.Navigation_name()
-                +" 冷氣型號:" +car.Air_conditioner_name());
+                " 駕駛座位置：" + car.drivePosition()+" 導航型號:" +car.navigationName()
+                +" 冷氣型號:" +car.airConditionerName());
     }
     //售車總收入
     public int getMoney() {
@@ -18,10 +18,10 @@ public class Shop {
     }
     public static void main(String[] args) {
         Shop Shop = new Shop();
-        Shop.sellCar(new BMW());
-        Shop.searchCar(new BMW()) ;
-        Shop.sellCar(new TOYOTA());
-        Shop.searchCar(new TOYOTA());
+        Shop.sellCar(new Bmw());
+        Shop.searchCar(new Bmw()) ;
+        Shop.sellCar(new Toyota());
+        Shop.searchCar(new Toyota());
         System.out.println("總收入："  + Shop.getMoney());
     }
 }

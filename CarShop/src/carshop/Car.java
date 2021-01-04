@@ -1,27 +1,27 @@
 package carshop;
 
-abstract public class Car implements Navigation,Air_conditioner { //方向盤 輪子
+abstract public class Car implements Navigation,AirConditioner { //
 
     abstract public String getName();   //汽車名稱
     abstract public int getPrice() ;  //獲得汽車售價
-    abstract public String drive_position();
+    abstract public String drivePosition();
 }
 
 interface Navigation {
-    String Navigation_name() ;
+    String navigationName() ;
 }
-interface Air_conditioner {
-    String Air_conditioner_name() ;
+interface AirConditioner {
+    String airConditionerName() ;
 }
-class BMW extends Car  {
+class Bmw extends Car  {
     int price = 300000;
 
     @Override
-    public String Navigation_name(){
+    public String navigationName(){
         return "NAV_TW" ;
     }
     @Override
-    public String Air_conditioner_name(){
+    public String airConditionerName(){
         return "AIR_TW" ;
     }
     @Override
@@ -31,16 +31,16 @@ class BMW extends Car  {
     @Override
     public int getPrice() { return price; }
     @Override
-    public String drive_position(){ return "Right" ; }
+    public String drivePosition(){ return "Right" ; }
 }
-class TOYOTA extends Car {
+class Toyota extends Car {
     int price =200000;
     @Override
-    public String Navigation_name(){
+    public String navigationName(){
         return "NAV_JP" ;
     }
     @Override
-    public String Air_conditioner_name(){ return "AIR_JP" ; }
+    public String airConditionerName(){ return "AIR_JP" ; }
     @Override
     public String getName() {
         return "TOYOTA";
@@ -50,7 +50,7 @@ class TOYOTA extends Car {
         return price;
     }
     @Override
-    public String drive_position(){
+    public String drivePosition(){
         return "Left" ;
     }
 }
