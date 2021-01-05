@@ -1,16 +1,16 @@
 package carshop;
 
-abstract public class Car implements Navigation,AirConditioner { //
+abstract public class Car implements Navigation,AirConditioner {
 
     abstract public String getName();   //汽車名稱
     abstract public int getPrice() ;  //獲得汽車售價
-    abstract public String drivePosition();
+    abstract public String drivePosition();//駕駛座位置
 }
 
-interface Navigation {
+interface Navigation {//引擎製造商
     String navigationName() ;
 }
-interface AirConditioner {
+interface AirConditioner {//冷氣
     String airConditionerName() ;
 }
 class Bmw extends Car  {
