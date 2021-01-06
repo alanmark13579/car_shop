@@ -10,7 +10,7 @@ abstract public class Car implements Navigation,AirConditioner {
 interface Navigation {//引擎製造商
     String navigationName() ;
 }
-interface AirConditioner {//冷氣
+interface AirConditioner {//冷氣製造商
     String airConditionerName() ;
 }
 class Bmw extends Car  { //BMW車體細節
