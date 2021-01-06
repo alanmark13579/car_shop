@@ -13,7 +13,7 @@ interface Navigation {//引擎製造商
 interface AirConditioner {//冷氣
     String airConditionerName() ;
 }
-class Bmw extends Car  {
+class Bmw extends Car  { //BMW車體細節
     int price = 300000;
 
     @Override
@@ -33,7 +33,7 @@ class Bmw extends Car  {
     @Override
     public String drivePosition(){ return "Right" ; }
 }
-class Toyota extends Car {
+class Toyota extends Car { //Toyota車體細節
     int price =200000;
     @Override
     public String navigationName(){

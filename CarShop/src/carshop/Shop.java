@@ -7,7 +7,7 @@ public class Shop {
         System.out.println("車型："  + car.getName()   +" 單價："  + car.getPrice());
         money  = money+car.getPrice();  //增加賣出車售價的收入
     }
-    public void searchCar(Car car) {  //賣出一部車
+    public void searchCar(Car car) {  //搜尋一部車的詳情
         System.out.println("車型："  + car.getName()  + " 單價："  + car.getPrice()+
                 " 駕駛座位置：" + car.drivePosition()+" 導航型號:" +car.navigationName()
                 +" 冷氣型號:" +car.airConditionerName());
@@ -16,7 +16,7 @@ public class Shop {
     public int getMoney() {
         return money;
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) { //texting
         Shop Shop = new Shop();
         Shop.sellCar(new Bmw());
         Shop.searchCar(new Bmw()) ;
