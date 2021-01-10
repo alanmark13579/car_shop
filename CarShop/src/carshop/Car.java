@@ -4,7 +4,7 @@ abstract public class Car implements Navigation,AirConditioner {
 
     abstract public String getName();   //汽車名稱
     abstract public int getPrice() ;  //獲得汽車售價
-    abstract public int getPrice(float discount) ;  //獲得汽車售價
+    abstract public int getPrice(float discount) ;  //獲得汽車折價
     abstract public String drivePosition();//駕駛座位置
     abstract public String carType();
 }
