@@ -8,7 +8,8 @@ public class Shop {
         money  = money+car.getPrice();  //增加賣出車售價的收入
     }
     public void searchCar(Car car) {  //搜尋一部車的詳情
-        System.out.println("車型："  + car.getName()  + " 單價："  + car.getPrice()+"元"+
+        System.out.println("車型："  + car.getName()
+                + " 單價："  + car.getPrice()+"元"+ " 折價："  + car.getPrice((float)0.85)+"元"+
                 " 車種:" + car.carType()+ " 駕駛座位置：" + car.drivePosition()
                 +" 導航型號:" +car.navigationName() +" 冷氣型號:" +car.airConditionerName());
     }

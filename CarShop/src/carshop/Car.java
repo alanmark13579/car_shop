@@ -4,6 +4,7 @@ abstract public class Car implements Navigation,AirConditioner {
 
     abstract public String getName();   //汽車名稱
     abstract public int getPrice() ;  //獲得汽車售價
+    abstract public int getPrice(float discount) ;  //獲得汽車售價
     abstract public String drivePosition();//駕駛座位置
     abstract public String carType();
 }
@@ -29,8 +30,14 @@ class Bmw extends Car  { //BMW車體細節
     public String getName() {
         return "BMW";
     }
+    //overload
     @Override
     public int getPrice() { return price; }
+    @Override
+    public int getPrice(float discount) {
+        float priceDiscount = price * discount ;
+        return (int)priceDiscount;
+    }
     @Override
     public String drivePosition(){ return "Right" ; }
     @Override
@@ -48,9 +55,15 @@ class Toyota extends Car { //Toyota車體細節
     public String getName() {
         return "TOYOTA";
     }
+    //overload
     @Override
     public int getPrice() {
         return price;
+    }
+    @Override
+    public int getPrice(float discount) {
+        float priceDiscount = price * discount ;
+        return (int)priceDiscount;
     }
     @Override
     public String drivePosition(){
